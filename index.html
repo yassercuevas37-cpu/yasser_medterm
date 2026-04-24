@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Midterm Project</title>
+
+    <style>
+        /* TAG SELECTOR */
+        body {
+            font-family: Arial;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        article {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        aside {
+            background-color: #ddd;
+            padding: 10px;
+        }
+
+        /* CLASS SELECTOR */
+        .highlight {
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* ID SELECTOR */
+        #dynamicText {
+            color: red;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Web Development Page</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+</nav>
+
+<section>
+    <article>
+        <h2>Student Info</h2>
+        <p class="highlight" id="info"></p>
+    </article>
+
+    <article>
+        <h2>JavaScript Activities</h2>
+
+        <!-- BUTTON FUNCTION -->
+        <button onclick="showAlert()">Click Me</button>
+
+        <br><br>
+
+        <!-- USER INPUT -->
+        <input type="text" id="userInput" placeholder="Enter something">
+        <button onclick="displayInput()">Submit</button>
+
+        <p id="dynamicText"></p>
+
+        <br>
+
+        <!-- EVENT HANDLING -->
+        <button onclick="changeContent()">Change Content</button>
+        <p id="eventText">Original Content</p>
+
+    </article>
+</section>
+
+<aside>
+    <p>Aside Content: Tips and Info</p>
+</aside>
+
+<footer>
+    <p>© 2026 My Website</p>
+</footer>
+
+<script>
+    // VARIABLES AND OUTPUT
+    let name = "Your Name";
+    let course = "Web Development";
+
+    document.getElementById("info").innerHTML =
+        "Name: " + name + "<br>Course: " + course;
+
+    // BUTTON FUNCTION
+    function showAlert() {
+        alert("Button clicked!");
+    }
+
+    // USER INPUT
+    function displayInput() {
+        let input = document.getElementById("userInput").value;
+        document.getElementById("dynamicText").innerHTML =
+            "You entered: " + input;
+    }
+
+    // EVENT HANDLING
+    function changeContent() {
+        document.getElementById("eventText").innerHTML =
+            "Content has been changed!";
+    }
+</script>
+
+<!-- 
+PASTE YOUR LINKS HERE AFTER HOSTING
+
+GitHub Pages Link: https://yourusername.github.io/repository-name
+Neocities Link: https://yourusername.neocities.org
+-->
+
+</body>
+</html>
